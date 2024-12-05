@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Firebase SDK -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDb2tyBkY5nLgGgMoOGhUVJzBAVEB5CYB0",
+      authDomain: "gonort-tech.firebaseapp.com",
+      projectId: "gonort-tech",
+      storageBucket: "gonort-tech.firebasestorage.app",
+      messagingSenderId: "1089907796570",
+      appId: "1:1089907796570:web:2c28eeca3338cfa66b8663",
+      measurementId: "G-DY0GN4W6WK"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <!-- Flutter base href (automatically replaced during build) -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="componentes">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>componentes</title>
+
+  <!-- Manifest and Model Viewer assets -->
+  <link rel="manifest" href="manifest.json">
+  <script type="module" src="./assets/packages/model_viewer_plus/assets/model-viewer.min.js" defer></script>
+
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+  <!-- Registrar el Service Worker -->
+  <script src="flutter_service_worker.js" defer></script>
+</body>
+</html>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('flutter_service_worker.js');
+    });
+  }
+</script>
